@@ -85,6 +85,15 @@ runners.reduce((acc, item) => {
 
 // Problem 1
 
+// The large shirts won't be available for the event due to an ordering issue.  Get a list of runners with large sized shirts so they can choose a different size. Return an array named largeShirts that contains information about the runners that have a shirt size of S and log the result
+let smallShirts = runners.filter(id => id.shirt_size == "S");
+console.log(smallShirts);
+
+
 // Problem 2
+// all paper copies were lost and we need send an email to all the runners
+let sendEmail = runners.map(id  => id.email);
+
+
 
 // Problem 3

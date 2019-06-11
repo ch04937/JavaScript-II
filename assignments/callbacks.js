@@ -61,14 +61,19 @@ multiplyNums(3,3, function(multiply){
 });
 
 function contains(item, list, cb) {
+  let isInList = false;
   // contains checks if an item is present inside of the given array/list.
   // Pass true to the callback if it is, otherwise pass false.
-  return cb(list.includes(item));
-
+    const len = list.length;
+    for(let i = 0; i < len; i+=1) {
+        if (item === list[i]) isInList = true;
+    }
+    return cb(isInList);
 }
-contains('Pencil',items,cb);
-console.log(cb);
-
+const list = ["cat", "dog", "cat-dog", "yo-yo"];
+contains("yo-yo", list, function (result) {
+    console.log(result);
+});
 
 /* STRETCH PROBLEM */
 
